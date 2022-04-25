@@ -9,7 +9,7 @@
   function getValue(){
 
     var input1 = document.getElementById("input1").value.toString();
-  var input2 = document.getElementById("input1").value.toString();
+  var input2 = document.getElementById("input2").value.toString();
     
     fetch('https://adition-calulator.ikejlemieux.repl.co/apiHandler?url=https://AditionCalculatorApi.ikejlemieux.repl.co?num1='+input1+'%26num2='+input2)
       .then(response => response.text())
