@@ -1,0 +1,19 @@
+<input id="input1">num1</input><br>
+<input id="input2">num2</input><br>
+<button onclick='getValue();'>run</button>
+<p id="output">output</p>
+
+<script>
+  var value;
+  
+  function getValue(){
+
+    var input1 = document.getElementById("input1").value.toString();
+  var input2 = document.getElementById("input1").value.toString();
+    
+    fetch('https://adition-calulator.ikejlemieux.repl.co/apiHandler?url=https://AditionCalculatorApi.ikejlemieux.repl.co?num1='+input1+'%26num2='+input2)
+      .then(response => response.text())
+      .then((val) => { value = val; console.log(value) })
+    .then(() => document.getElementById("output").innerHTML = value)
+  }
+  </script>
